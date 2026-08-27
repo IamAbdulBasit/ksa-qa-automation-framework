@@ -7,4 +7,4 @@ node_modules/
 /playwright/.auth/
 .env
 .env.*
-./Microsoft SSO + MFA/cookies.json
+Microsoft SSO + MFA/cookies.json
