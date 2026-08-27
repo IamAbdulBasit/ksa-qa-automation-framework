@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test('login page loads', async ({ page }) => {
-  await page.goto('/login');
-  await expect(page.getByRole('button', { name: 'Login with AD' })).toBeVisible();
+test('authenticated session lands on the app', async ({ page }) => {
+  await page.goto('/work-order/list-work-orders');
+  await expect(page).toHaveURL('/work-order/list-work-orders');
 });
