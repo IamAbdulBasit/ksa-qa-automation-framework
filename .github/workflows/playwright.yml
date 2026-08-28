@@ -23,7 +23,7 @@ jobs:
 
       - run: npx playwright test                     # run setup + tests, headless
         env:                                         # inject secrets as env vars
-          BASE_URL: ${{ secrets.BASE_URL }}
+          BASE_URL: ${{ vars.BASE_URL }}
           TEST_USER_EMAIL: ${{ secrets.TEST_USER_EMAIL }}
           TEST_USER_PASSWORD: ${{ secrets.TEST_USER_PASSWORD }}
           CI: true                                   # flips your config's CI-only settings
