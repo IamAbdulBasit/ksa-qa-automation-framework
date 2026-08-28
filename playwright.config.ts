@@ -20,14 +20,13 @@ export default defineConfig({
       testDir: './Microsoft SSO + MFA',
       testMatch: 'auth.setup.ts',
       use: {
-        channel: 'chrome',
-        headless: false
+        channel: 'chrome'
       }
     },
 
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'], storageState: './Microsoft SSO + MFA/cookies.json', headless: false },
+      use: { ...devices['Desktop Chrome'], storageState: './Microsoft SSO + MFA/cookies.json' },
       dependencies: ['setup']
     },
 
